@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Form tính diện tích hình chữ nhật</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Form thanh toán tiền điện</h2>
+    <form>
+      <div class="form-group">
+        <label for="chuHo">Tên chủ hộ: </label>
+        <input type="text" class="form-control" id="chuHo" placeholder="Nhập chủ hộ">
+      </div>
+      <div class="form-group">
+        <label for="soCu">Chỉ số cũ: </label>
+        <input type="number" class="form-control" id="soCu" placeholder="Nhập chỉ số cũ">
+      </div>
+      <div class="form-group">
+        <label for="soMoi">Chỉ số mới: </label>
+        <input type="number" class="form-control" id="soMoi" placeholder="Nhập chỉ số mới">
+      </div>
+      <div class="form-group">
+        <label for="donGia">Đơn giá: </label>
+        <input type="number" class="form-control" id="donGia" placeholder="Nhập đơn giá">
+      </div>
+      <div class="form-group">
+        <label for="tongTien">Số tiền thanh toán: </label>
+        <input type="number" class="form-control" id="tongTien" placeholder="Tổng tiền">
+      </div>
+      <button type="button" class="btn btn-primary" onclick="tinh()">Tính</button>
+    </form>
+    <br>
+  </div>
+
+  <script>
+    function tinh() {
+      var soMoi = document.getElementById("soMoi").value;
+      var soCu = document.getElementById("soCu").value;
+      var donGia = document.getElementById("donGia").value;
+      document.getElementById("tongTien").value = (soMoi - soCu) * donGia;
+    }
+  </script>
+
+</body>
+
+</html>

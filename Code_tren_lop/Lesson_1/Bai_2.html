@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Form tính diện tích hình chữ nhật</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Form tính diện tích và chu vi hình tròn</h2>
+    <form>
+      <div class="form-group">
+        <label for="banKinh">Bán kính: </label>
+        <input type="number" class="form-control" id="banKinh" placeholder="Nhập bán kính">
+      </div>
+      <div class="form-group">
+        <label for="dienTich">Diện tích: </label>
+        <input type="number" class="form-control" id="dienTich" placeholder="Diện tích">
+      </div>
+      <div class="form-group">
+        <label for="chuVi">Chu vi: </label>
+        <input type="number" class="form-control" id="chuVi" placeholder="Chu vi">
+      </div>
+      <button type="button" class="btn btn-primary" onclick="tinh() ">Tính</button>
+    </form>
+    <br>
+  </div>
+
+  <script>
+    function tinh() {
+      var banKinh = document.getElementById("banKinh").value;
+      var dienTich = 3.14 * banKinh * banKinh;
+      var chuVi = 2 * 3.14 * banKinh;
+      document.getElementById("dienTich").value = dienTich;
+      document.getElementById("chuVi").value = chuVi;
+    }
+  </script>
+
+</body>
+
+</html>
