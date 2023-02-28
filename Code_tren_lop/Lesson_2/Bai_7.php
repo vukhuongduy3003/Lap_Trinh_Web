@@ -11,6 +11,7 @@
 
 <body>
   <form method="post">
+    <h2>Kết quả học tập</h2>
     <div class="form-group">
       <label for="iddiemHK1">Điểm học kỳ 1:</label>
       <input type="number" class="form-control" id="iddiemHK1" name="diemHK1" placeholder="Nhập điểm">
