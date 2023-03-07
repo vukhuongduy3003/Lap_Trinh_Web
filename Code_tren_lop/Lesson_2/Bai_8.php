@@ -21,7 +21,7 @@
       <input type="number" class="form-control" id="diemHoa" name="diemHoa" placeholder="Nhập điểm">
     </div>
     <div class="form-group">
-      <label for="diemLy">Hoá:</label>
+      <label for="diemLy">Lý:</label>
       <input type="number" class="form-control" id="diemLy" name="diemLy" placeholder="Nhập điểm">
     </div>
     <div class="form-group">
@@ -37,7 +37,7 @@
     $diemLy = $_POST['diemLy'];
     $diemChuan = $_POST['diemChuan'];
     $tongDiem = $diemToan + $diemHoa + $diemLy;
-    if($tongDiem >= $diemChuan) {
+    if($diemToan > 0 && $diemHoa > 0 && $diemLy > 0 && $tongDiem >= $diemChuan) {
       $ketQua = "Đậu";
     }
     else {
